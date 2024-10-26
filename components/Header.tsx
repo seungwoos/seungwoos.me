@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import DarkModeToggle from "../DarkModeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 
 export default function Header() {
   return (
-    <header className="bg-white dark:bg-slate-950">
+    <header className="bg-white dark:bg-black">
       <nav className="flex items-center justify-between h-16">
         <Link href="/">@seungwoos</Link>
 
