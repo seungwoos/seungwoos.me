@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "providers/ThemeProvider";
-import Analytics from "components/Analytics";
+// import Analytics from "components/Analytics";
 import { Inter } from "next/font/google";
 import Container from "components/layout/Container";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
