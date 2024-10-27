@@ -11,7 +11,6 @@ export default function DarkModeToggle() {
       className="p-2 rounded-md bg-white dark:bg-black text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
       aria-label="Toggle dark mode"
     >
-      {/* {theme === "dark" ? <Sun size={24} /> : <Moon size={24} />} */}
       {theme !== "dark" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
