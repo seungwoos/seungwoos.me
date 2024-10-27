@@ -7,11 +7,6 @@ import { Analytics } from "@vercel/analytics/react";
 
 const inter = Space_Grotesk({ subsets: ["latin"], display: "swap" });
 
-export const metadata: Metadata = {
-  title: "Seungwoo Kim",
-  description: "Seungwoo's blog",
-};
-
 export default function RootLayout({
   children,
 }: {
