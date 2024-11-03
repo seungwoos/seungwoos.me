@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "providers/ThemeProvider";
 import { Space_Grotesk } from "next/font/google";
@@ -16,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-window bg-white dark:bg-black ${inter.className}`}
+        className={`bg-white dark:bg-black text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ReadingProgressBar />

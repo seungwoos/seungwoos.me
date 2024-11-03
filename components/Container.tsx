@@ -4,18 +4,12 @@ import Header from "./Header";
 
 export default function Container({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-black text-slate-900 dark:text-slate-50">
-      <div className="fixed top-0 w-full bg-white dark:bg-black z-10">
-        <div className="max-w-xl mx-auto px-4">
-          <Header />
-        </div>
+    <div className="min-h-window antialiased flex flex-col">
+      <div className="fixed top-0 w-full bg-white/90 dark:bg-black/90 z-10">
+        <Header />
       </div>
-      <main className="max-w-xl mx-auto w-full px-4 pt-24 flex-grow">
-        {children}
-      </main>
-      <div className="max-w-xl mx-auto w-full px-4 py-10">
-        <Footer />
-      </div>
+      <main className="max-w-2xl mx-auto pt-24 flex-grow">{children}</main>
+      <Footer />
     </div>
   );
 }
