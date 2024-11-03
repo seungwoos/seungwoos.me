@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState, useCallback } from "react";
 import { TableOfContentsProps, TocItem } from "types/toc";
 
@@ -23,6 +24,28 @@ export function TableOfContents({
   const cleanHeadingText = useCallback((text: string): string => {
     return text.replace(/\*\*/g, "").replace(/\*/g, "").trim();
   }, []);
+
+  const handleScroll = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+      e.preventDefault();
+      const element = document.getElementById(id);
+      if (!element) return;
+
+      const offset = 80; // Adjust this value based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
+      // Update URL hash
+      window.history.replaceState({}, "", `#${id}`);
+      setActiveId(id);
+    },
+    []
+  );
 
   useEffect(() => {
     const tocItems = content
@@ -71,47 +94,30 @@ export function TableOfContents({
     return () => observer.disconnect();
   }, [headingLevels]);
 
-  const scrollToSection = useCallback(
-    (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-      e.preventDefault();
-      const element = document.getElementById(id);
-      if (!element) return;
-
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - offset;
-
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-      setActiveId(id);
-    },
-    []
-  );
-
   return (
     <div className="hidden xl:block py-16">
       <div className="bg-white dark:bg-black backdrop-blur-sm p-4 rounded-lg">
-        <h3 className="font-semibold mb-6 text-2xl">Contents</h3>
+        <h3 className="font-semibold mb-6 text-sm">Contents</h3>
         <nav className="max-h-[calc(100vh-4rem)] flex flex-col gap-6">
           {toc.map((item, index) => (
-            <a
+            <Link
               key={`${item.id}-${index}`}
               href={`#${item.id}`}
-              onClick={(e) => scrollToSection(e, item.id)}
+              onClick={(e) => handleScroll(e, item.id)}
               className={`
                 block text-sm
                 text-gray-600 dark:text-gray-300
                 hover:text-blue-600 hover:scale-105
                 active:text-purple-600
-                transition-all duration-200 ease-in-out
+                transition-all duration-300 ease-in-out
                 ${activeId === item.id ? "text-blue-600 font-medium" : ""}
               `}
               style={{
                 marginLeft: `${(item.level - 1) * 12}px`,
-                fontSize: "1rem",
               }}
             >
               {item.text}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
