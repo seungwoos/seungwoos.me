@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex items-center justify-between text-sm text-neutral-800 dark:text-neutral-100">
+    <footer className="flex items-center justify-between text-sm max-w-2xl mx-auto w-full py-10">
       <p>Seungwoo Kim © 2024</p>
-      <ul className="flex items-center space-x-2">
+      <ul className="flex items-center space-x-4">
         <li>
           <Link href="https://github.com/seungwoos">github</Link>
         </li>
