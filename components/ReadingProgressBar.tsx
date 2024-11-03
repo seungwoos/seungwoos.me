@@ -15,18 +15,25 @@ export default function ReadingProgressBar() {
       setProgress(Math.min(100, Math.max(0, newProgress)));
     };
 
-    window.addEventListener("scroll", calculateProgress);
+    // Use requestAnimationFrame for smooth updates
+    let rafId: number;
+    const handleScroll = () => {
+      rafId = requestAnimationFrame(calculateProgress);
+    };
 
-    calculateProgress();
+    window.addEventListener("scroll", handleScroll);
+    calculateProgress(); // Initial calculation
 
-    // Cleanup
-    return () => window.removeEventListener("scroll", calculateProgress);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(rafId);
+    };
   }, []);
 
   return (
     <div className="fixed top-0 left-0 w-full h-1 bg-transparent z-50">
       <div
-        className="h-full bg-blue-600 transition-all duration-100 ease-out"
+        className="h-full bg-blue-600 transition-all duration-300 ease-out"
         style={{ width: `${progress}%` }}
       />
     </div>
