@@ -16,8 +16,8 @@ export default async function About() {
       <div className="prose dark:prose-invert prose-p:m-0">
         <MarkdownRenderer content={content} />
       </div>
-      <div className="fixed top-[5rem] left-[calc(60%+20rem)] w-64">
-        <TableOfContents content={content} headingLevels={[1]} />
+      <div className="relative">
+        <TableOfContents content={content} headingLevels={[2]} />
       </div>
     </div>
   );
