@@ -21,25 +21,13 @@ export function MarkdownRenderer({ content }: { content: string }) {
         remarkPlugins={[remarkGfm]}
         components={{
           h1: ({ node, ...props }) => (
-            <h1
-              id={generateId(props.children?.toString() || "")}
-              className="text-3xl font-extrabold mb-1"
-              {...props}
-            />
+            <h1 id={generateId(props.children?.toString() || "")} {...props} />
           ),
           h2: ({ node, ...props }) => (
-            <h2
-              id={generateId(props.children?.toString() || "")}
-              className="text-2xl font-bold"
-              {...props}
-            />
+            <h2 id={generateId(props.children?.toString() || "")} {...props} />
           ),
           h3: ({ node, ...props }) => (
-            <h3
-              id={generateId(props.children?.toString() || "")}
-              className="text-xl font-semibold"
-              {...props}
-            />
+            <h3 id={generateId(props.children?.toString() || "")} {...props} />
           ),
           ul: ({ node, ...props }) => <ul className="list-disc" {...props} />,
           ol: ({ node, ...props }) => (
@@ -56,7 +44,7 @@ export function MarkdownRenderer({ content }: { content: string }) {
           ),
           div: ({ node, className, children, ...props }) => {
             return (
-              <div className="mb-8" {...props}>
+              <div className="-mb-10" {...props}>
                 {children}
               </div>
             );
