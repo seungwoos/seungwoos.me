@@ -13,9 +13,17 @@ export default function Header() {
         className="sticky rounded-none flex items-center justify-between max-w-screen-md mx-auto"
         shadow={false}
         color="transparent"
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
       >
         <ul>
-          <Typography className="cursor-pointer font-medium text-black dark:text-white">
+          <Typography
+            className="cursor-pointer font-medium text-black dark:text-white"
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+          >
             <Link href="/">@seungwoos</Link>
           </Typography>
         </ul>
@@ -26,6 +34,9 @@ export default function Header() {
                 as={Link}
                 href={href}
                 className="font-medium transition-all duration-300 ease-in-out hover:text-gray-300 dark:hover:texts-gray-600 cursor-pointer text-black dark:text-white"
+                placeholder={undefined}
+                onPointerEnterCapture={undefined}
+                onPointerLeaveCapture={undefined}
               >
                 {label}
               </Typography>
