@@ -13,7 +13,7 @@ export default async function About() {
 
   return (
     <div className="relative flex">
-      <div className="prose dark:prose-invert prose-p:m-0">
+      <div className="prose dark:prose-invert prose-p:m-0 max-w-screen-md">
         <MarkdownRenderer content={content} />
       </div>
       <div className="relative">

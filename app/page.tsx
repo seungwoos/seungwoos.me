@@ -11,7 +11,7 @@ export default async function Home() {
   const { content } = await getPageContent("home");
 
   return (
-    <div className="prose dark:prose-invert prose-p:m-1">
+    <div className="prose dark:prose-invert prose-p:m-1 max-w-screen-md">
       <MarkdownRenderer content={content} />
     </div>
   );
