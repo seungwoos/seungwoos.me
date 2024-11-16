@@ -8,11 +8,7 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "selector",
-  theme: {
-    fontFamily: {
-      sans: ["Open Sans", "sans-serif"],
-    },
-  },
+  theme: {},
   plugins: [require("@tailwindcss/typography")],
 };
 
