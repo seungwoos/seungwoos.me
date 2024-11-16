@@ -3,7 +3,7 @@ title: seungwoo's about
 layout: post
 ---
 
-# About
+# about me
 
 ## Work Experience
 
@@ -43,56 +43,6 @@ M.S. in Artificial Intelligence (Mar. 2021 - Aug. 2023)
 B.S. in Computer Science and Engineering (Mar. 2013 - Feb. 2021)
 
 - Compulsory military service in R.O.K. Air Force (Dec. 2014 - Dec. 2016)
-
-## Projects
-
----
-
-### Personal website
-
-_[seungwoos.me](https://github.com/seungwoos/seungwoos.me)_
-
-- Developed a personal website with Retrieval Augmented Generation (RAG) about myself
-- Tools used: Typescript, Next.js, Supabase, Python, Langchain
-
-### Diffusion acceleration
-
-_May 2023 - Jul 2023_
-
-- Optimized medical image generation through experimental analysis of deterministic diffusion acceleration techniques
-
-### Hilbert diffusion models
-
-_Jan 2023 - Jun 2023_
-
-- Researched on Hilbert diffusion models by constructing 1D functional datasets, benchmark model, and conducted experiments on 2D image generation
-- Accepted for publication in NeurIPS 2023 (Spotlight)
-
-### Robust MRI segmentation
-
-_Apr 2022 - Dec 2022_
-
-- Conducted experimental validation of NeuBoots on 3D tumor segmentation [Medical Segmentation Decathlon]{http://medicaldecathlon.com/} dataset using synthetic imbalanced datasets, demonstrating improved robustness through U-ResNet and ScNAS architectures
-
-### Brain malignancy differentiation on 2D CT images
-
-_Jan 2022 - Jul 2022_
-
-- Implemented classification models using deep ensembles and neural bootstrapper techniques and analyzed metrics with CAM (Class Activation Mapping) for model interpretability
-- Accepted for publication in Computer Methods and Programs in Biomedicine (collaborative research with Yonsei University Health System)
-
-### IVUS post-stenting prediction with clinical information
-
-_Sep 2021 - Mar 2021_
-
-- Implemented post-stenting prediction model for IVUS (Intravascular Ultrasound) cardiovascular imaging using convolutional vision transformer, incorporating multi-modal data analysis and attention-based visual interpretation
-
-### Thyroid classification
-
-_Mar 2021 - Dec 2021_
-
-- Developed novel thyroid malignancy classification method combining bright field and refractive index images using DenseNet and XGBoost, with analysis via Grad-CAM
-- Accepted for publication in Scientific Reports
 
 ## Publications
 

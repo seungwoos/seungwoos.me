@@ -3,7 +3,7 @@ title: seungwoo's
 layout: post
 ---
 
-## Hi 👋
+## 안녕하세요 👋
 
 I'm a **machine learning engineer** interested in creating engaging human-AI interactions. With experience in medical imaging and computer vision, I'm currently exploring Large Language Models (LLMs) and Large Vision Models (LVMs) in the field of healthcare and beyond.
 
