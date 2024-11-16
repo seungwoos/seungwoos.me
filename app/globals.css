@@ -2,11 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  transition: background-color 0.3s ease;
-}
-
+html,
 body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
