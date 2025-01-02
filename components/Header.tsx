@@ -12,7 +12,7 @@ const NAV_ITEMS = [
 export default function Header() {
   return (
     <Navbar
-      className="sticky top-0 z-10 h-max px-4 py-2 lg:px-8 lg:py-4 flex items-center justify-between max-w-screen-md mx-auto rounded-none bg-white/90 dark:bg-black/90"
+      className="sticky top-0 z-10 h-max px-4 py-2 flex items-center justify-between max-w-screen-md mx-auto rounded-none bg-white/90 dark:bg-black/90"
       shadow={false}
       color="transparent"
     >
