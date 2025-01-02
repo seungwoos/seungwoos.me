@@ -1,5 +1,5 @@
 import "./globals.css";
-import { ThemeProvider } from "providers/ThemeProvider";
+import { ThemeProvider } from "components/ThemeProvider";
 import Container from "components/Container";
 import { Analytics } from "@vercel/analytics/react";
 import ReadingProgressBar from "components/ReadingProgressBar";
