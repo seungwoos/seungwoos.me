@@ -20,9 +20,6 @@ export default function ThemeToggleButton() {
       variant="text"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="rounded-md bg-white dark:bg-black hover:bg-gray-300 dark:hover:bg-gray-600 text-black dark:text-white"
-      placeholder={undefined}
-      onPointerEnterCapture={undefined}
-      onPointerLeaveCapture={undefined}
     >
       {theme === "dark" ? (
         <Sun className="w-4 h-4" />
