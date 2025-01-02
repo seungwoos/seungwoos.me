@@ -1,3 +1,3 @@
 export default async function Post() {
-  return <div>Hi</div>;
+  return <main>The post content should go here</main>;
 }
