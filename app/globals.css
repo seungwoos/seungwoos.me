@@ -1,3 +1,5 @@
+@import "react-notion-x/src/styles.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,4 +15,16 @@ body {
 
 * {
   transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.notion-link {
+  color: rgb(75, 170, 210) !important;
+  word-break: break-word;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  opacity: 1 !important;
+  transition: color 100ms ease-in;
+}
+
+.notion-link:hover {
+  color: #165eaa !important;
 }
