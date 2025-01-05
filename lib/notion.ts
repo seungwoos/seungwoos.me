@@ -41,11 +41,37 @@ export async function getPosts() {
       id: page.id,
       title: page.properties.Title.title[0]?.plain_text || "Untitled",
       date: page.created_time,
-      slug: page.properties.Slug?.rich_text[0]?.plain_text || page.id,
+      slug: page.properties.Slug?.formula.string || page.id,
     }));
   } catch (error) {
     console.error("Error fetching posts:", error);
-    return [];
+    throw error;
+  }
+}
+
+export async function getPostBySlug(slug: string) {
+  if (!slug) {
+    console.error("Slug parameter is required");
+    return null;
+  }
+
+  try {
+    const response = await notion.databases.query({
+      database_id: notionDatabaseId!,
+      filter: {
+        property: "Slug",
+        formula: { string: { equals: slug } },
+      },
+    });
+
+    if (response.results.length === 0) {
+      return null;
+    }
+
+    return response.results[0];
+  } catch (error) {
+    console.error("Error fetching post with slug:", error);
+    throw error;
   }
 }
 
