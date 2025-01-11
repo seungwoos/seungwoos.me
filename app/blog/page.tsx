@@ -1,6 +1,8 @@
 import { getPosts } from "lib/notion";
 import Link from "next/link";
 
+export const revalidate = 60;
+
 export default async function Blog() {
   const posts = await getPosts();
 
